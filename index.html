@@ -2,60 +2,31 @@
 <html>
 
 <head>
-    <title>Page Title</title>
+    <title>Jajanken</title>
     <meta charset="UTF-8" />
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-    <script>
-
-        function game() {
-            let score = {'player': 0, 'computer': 0};
-            let rounds = 0;
-            while (rounds < 5) {
-                const playerSelection = prompt("Please enter selection");
-                const computerSelection = computerPlay();
-                console.log(playRound(playerSelection, computerSelection));
-                rounds++;
-            }
-            return rounds;
-        }
-
-        function computerPlay() {
-            let options = ["Rock", "Paper", "Scissors"];
-            let selection = Math.floor(Math.random() * options.length);
-            //console.log(options[selection]);
-            return options[selection];
-        }
-
-        function playRound(playerSelection, computerSelection) {
-            let result = "";
-            let player = playerSelection.toLowerCase();
-            while (player != "rock" && player != "paper" && player != "scissors") {
-                console.log(player);
-                player = prompt("Please enter only 'Rock', 'Paper' or 'Scissors'");
-            }
-            let computer = computerSelection.toLowerCase();
-            if (player === computer) {
-                result = "Draw"
-            } else if ((player === "paper" && computer === "rock")
-                || (player === "rock" && computer === "scissors")
-                || (player === "scissors" && computer === "paper")) {
-                result = "Player";
-            } else {
-                result = "Computer";
-            }
-            if (result === "Player") {
-                return `You win! ${player} beats ${computer}`;
-            } else if (result === "Computer") {
-                return `You lose! ${computer} beats ${player}`;
-            }
-            return "Draw";
-        }
-
-        
-        game();
-    </script>
+    <div>
+        <h1> ROCK PAPER SCISSORS</h1>
+    </div>
+    <div>
+        <p>PLAYER [0]  :  [0] COMPUTER</p>
+        <p>Round: 1</p>
+    </div>
+    <div>
+        <button id="rock">
+            <img src="rock.png">
+        </button>
+        <button id="paper">
+            <img src="paper.png">
+        </button>
+        <button id="scissors" class="resize-scissors">
+            <img src="scissors.png">
+        </button>
+    </div>
+    <script src="script.js"></script>
 </body>
 
 </html>

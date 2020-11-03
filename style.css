@@ -1,0 +1,33 @@
+html {
+    height: 95%;
+    
+}
+body {
+    background-color: rgba(0, 86, 143, 0.664);
+    height: 100%;
+}
+
+div {
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+button {
+    width: auto;
+    height: auto;
+    margin: 5px;
+    background-color: white;
+    border: 2px solid rgb(219, 176, 253);
+    outline: none;
+}
+button:hover {
+    border: 2px solid rgb(182, 87, 255);
+}
+
+p {
+    white-space: pre;
+    margin: 10px;
+}
